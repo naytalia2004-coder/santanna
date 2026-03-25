@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Santanna Midias 🌈</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: black;
+  color: white;
+}
+
+/* FUNDO RAVE */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #ff00cc, #00ffff, #ffcc00, #ff0066);
+  animation: bg 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes bg {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+/* GRID */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+/* CARD */
+.card {
+  background: rgba(0,0,0,0.7);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #ff00ff;
+}
+
+/* IMG */
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* INFO */
+.info {
+  text-align: center;
+  padding: 8px;
+}
+
+button {
+  background: linear-gradient(45deg, #ff00cc, #00ffff);
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* WHATS */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>Santanna Midias 🌈</header>
+
+<div class="container">
+
+<!-- TODAS AS FOTOS -->
+<script>
+const fotos = [
+"https://i.postimg.cc/y3RG1nBN/IMG_5787.avif",
+"https://i.postimg.cc/JyhdDRM4/IMG_5792.avif",
+"https://i.postimg.cc/R3bpw2ZW/IMG_5794.avif",
+"https://i.postimg.cc/R66sdGWY/IMG_5795.avif",
+"https://i.postimg.cc/phhGCk9H/IMG_5796.avif",
+"https://i.postimg.cc/56qPsXtf/IMG_5805.avif",
+"https://i.postimg.cc/hX22qNTK/IMG_5806.avif",
+"https://i.postimg.cc/y3hTpG7q/IMG_5831.avif",
+"https://i.postimg.cc/7G2906RN/IMG_5832.avif",
+"https://i.postimg.cc/gXFSM830/IMG_5835.avif",
+"https://i.postimg.cc/QKgqYzhm/IMG_5877.avif",
+"https://i.postimg.cc/GTPjgfd7/IMG_5893.avif",
+"https://i.postimg.cc/xcY5N9PY/IMG_5894.avif",
+"https://i.postimg.cc/qz0w6pGp/IMG_5895.avif",
+"https://i.postimg.cc/w7VVhnwZ/IMG_5898.avif",
+"https://i.postimg.cc/3dBBgzLh/IMG_5901.avif",
+"https://i.postimg.cc/XrYgxxhF/IMG_5904.avif",
+"https://i.postimg.cc/FYHxGGqx/IMG_5905.avif",
+"https://i.postimg.cc/cvLcTTjX/IMG_5906.avif",
+"https://i.postimg.cc/MnpYtt4s/IMG_5907.avif",
+"https://i.postimg.cc/HJf4YmLv/IMG_5909.avif",
+"https://i.postimg.cc/LqrB9SsT/IMG_5911.avif",
+"https://i.postimg.cc/5HZq4JtD/IMG_5912.avif",
+"https://i.postimg.cc/Mchb6wGh/IMG_5913.avif",
+"https://i.postimg.cc/zV0QJLYb/IMG_5914.avif",
+"https://i.postimg.cc/5XyRjxxJ/IMG_5917.avif",
+"https://i.postimg.cc/nXrPMHHH/IMG_5926.avif",
+"https://i.postimg.cc/BjzwKd6t/IMG_5927.avif",
+"https://i.postimg.cc/G4fSyZ2F/IMG_5930.avif",
+"https://i.postimg.cc/06JXdcKR/IMG_5941.avif",
+"https://i.postimg.cc/vgFqPf5M/IMG_5947.avif",
+"https://i.postimg.cc/7GfccwWn/IMG_5784.avif",
+"https://i.postimg.cc/6T4gf6R2/IMG_5785.avif",
+"https://i.postimg.cc/Th5FJ2mK/IMG_5786.avif"
+];
+
+const container = document.currentScript.parentElement;
+
+fotos.forEach(link => {
+  const card = document.createElement("div");
+  card.className = "card";
+
+  card.innerHTML = `
+    <img src="${link}">
+    <div class="info">
+      <p>R$ 4,99</p>
+      <button onclick="pix()">Comprar</button>
+    </div>
+  `;
+
+  container.appendChild(card);
+});
+</script>
+
+</div>
+
+<!-- WHATS -->
+<a class="whatsapp" href="https://wa.me/5584996156347" target="_blank">
+💬 WhatsApp
+</a>
+
+<!-- MÚSICA -->
+<audio autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">
+</audio>
+
+<script>
+function pix() {
+  navigator.clipboard.writeText("84996156347");
+
+  alert("Pix copiado!\n\nChave: 84996156347\nValor: R$ 4,99\n\nEnvie o comprovante no WhatsApp 💬");
+}
+</script>
+
+</body>
+</html>
